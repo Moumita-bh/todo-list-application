@@ -13,7 +13,8 @@ const app = express();
 app.use(express.json());
 
 
-app.use("/api/todos", todoRoutes);
+app.use("/api/todos", todoRoutes);  
+
 
 const __dirname = path.resolve();
 
@@ -24,10 +25,12 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.listen(PORT, () => {
-  connectDB();
-  console.log("Server started at http://localhost:4000");
-});
+
+  app.listen(PORT, () => {
+    connectDB();
+    console.log(`Server started at http://localhost:${PORT}`);
+  });
+
 
 
 
