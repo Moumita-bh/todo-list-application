@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { connectDB } from "../config/db.js";
+import { connectDB } from "./config/db.js"; // ✅ CORRECT
+
 
 import todoRoutes from "./routes/todo.route.js";
 import path from "path";
